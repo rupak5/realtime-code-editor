@@ -1,3 +1,44 @@
+.mainWrap {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.aside {
+  background: #1c1e29;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.editorWrap {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.chatWrap {
+  display: flex;
+  width: 30%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.asideInner {
+  flex: 1;
+}
+
+.logo {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 1px;
+}
+
+.logoImage {
+  height: 60px;
+}
+
 .homePageWrapper {
   display: flex;
   align-items: center;
@@ -59,10 +100,15 @@ footer a {
   transition: all 0.3s ease-in-out;
 }
 
-.joinBtn,
-.leaveBtn {
+.joinBtn {
   background: #4aed88;
   width: 100px;
+  margin-left: auto;
+}
+
+.leaveBtn {
+  background: #4aed88;
+  width: 100%;
   margin-left: auto;
 }
 
@@ -89,23 +135,6 @@ footer a:hover {
   border-color: #368654;
 }
 
-.mainWrap {
-  display: grid;
-  grid-template-columns: 230px 1fr;
-}
-
-.aside {
-  background: #1c1e29;
-  padding: 16px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.asideInner {
-  flex: 1;
-}
-
 .clientsList {
   display: flex;
   align-items: center;
@@ -119,27 +148,141 @@ footer a:hover {
   flex-direction: column;
   font-weight: bold;
 }
+
 .userName {
   margin-top: 10px;
 }
 
-.logo {
-  border-bottom: 1px solid #424242;
-  padding-bottom: 10px;
+.seLang {
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align-last: center;
 }
 
-.logoImage {
-  height: 60px;
-}
-
+.copyBtn,
+.runBtn,
 .leaveBtn {
   width: 100%;
   margin-top: 20px;
 }
 
-.CodeMirror {
-  min-height: calc(100vh - 20px);
-  font-size: 20px;
+@media screen and (min-width: 480px) {
+  .inputArea {
+    min-height: calc(15vh);
+    width: calc(68vw);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.401);
+    color: white;
+    font-size: 16px;
+  }
+  .CodeMirror {
+    min-height: calc(75vh);
+    width: calc(68vw);
+    font-size: 20px;
+    line-height: 1.5;
+    padding-top: 20px;
+  }
+}
+
+.IO-container {
+  display: flex;
+  justify-content: left;
+  width: calc(50vw);
+  min-height: calc(4vh);
+}
+
+.chatArea {
+  min-height: calc(91vh);
+  width: calc(20vw);
+  font-size: 16px;
   line-height: 1.6;
   padding-top: 20px;
+  background-color: #1c1e29;
+  color: white;
+  font-size: 16px;
+  border: 1px solid transparent;
+}
+
+.sendBtn,
+.runBtn {
+  color: white;
+  background-color: rgb(99, 92, 232);
+}
+
+.clickedLabel {
+  background-color: rgb(99, 92, 232); /* Green */
+  border: 1px solid transparent;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  width: 10%;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.notClickedLabel {
+  background-color: rgb(189, 187, 225); /* Green */
+  border: 1px solid transparent;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  width: 10%;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputField {
+  background-color: rgb(255, 255, 255); /* Green */
+  border: 1px solid transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 1px 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 70%;
+}
+
+.sendChatWrap {
+  display: flex;
+}
+
+.textarea-style::-webkit-scrollbar {
+  width: 10px;
+}
+
+.textarea-style::-webkit-scrollbar-track {
+  background: #1c1e29;
+}
+
+.textarea-style::-webkit-scrollbar-thumb {
+  background: rgb(99, 92, 232);
+}
+
+.textarea-style::-webkit-scrollbar-thumb:hover {
+  background: rgb(189, 187, 225);
 }
