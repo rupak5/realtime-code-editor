@@ -9,6 +9,7 @@ import ACTIONS from "../Actions";
 
 const Editor = ({ socketRef, roomId, onCodeChange }) => {
   const editorRef = useRef(null);
+
   useEffect(() => {
     async function init() {
       editorRef.current = CodeMirror.fromTextArea(
