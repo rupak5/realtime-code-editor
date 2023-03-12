@@ -191,7 +191,7 @@ const EditorPage = () => {
 
   return (
     <div className="mainWrap">
-      <div className="aside">
+      <div className="asideWrap">
         <div className="asideInner">
           <div className="logo">
             <img className="logoImage" src="/code-sync.png" alt="logo" />
