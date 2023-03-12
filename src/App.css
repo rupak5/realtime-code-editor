@@ -2,28 +2,30 @@
   display: flex;
   height: 100%;
   width: 100%;
+  flex-direction: row;
 }
 
-.aside {
+.asideWrap {
+  display: flex;
   background: #1c1e29;
   padding: 10px;
   color: #fff;
-  display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 13%;
 }
 
 .editorWrap {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
+  display: grid;
+  padding: 10px;
+  width: 60%;
+  height: 100%;
 }
 
 .chatWrap {
   display: flex;
-  width: 30%;
-  height: 100vh;
   flex-direction: column;
+  width: 25%;
+  height: 100%;
 }
 
 .asideInner {
@@ -77,17 +79,6 @@ footer a {
 .homePageLogo {
   height: 80px;
   margin-bottom: 30px;
-}
-
-.inputBox {
-  padding: 10px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  margin-bottom: 14px;
-  background: #eee;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .copyBtn {
@@ -175,43 +166,64 @@ footer a:hover {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 480px) {
-  .inputArea {
-    min-height: calc(15vh);
-    width: calc(68vw);
-    font-size: 16px;
-    line-height: 1.6;
-    padding-top: 20px;
-    background-color: rgba(0, 0, 0, 0.401);
-    color: white;
-    font-size: 16px;
-  }
-  .CodeMirror {
-    min-height: calc(75vh);
-    width: calc(68vw);
-    font-size: 20px;
-    line-height: 1.5;
-    padding-top: 20px;
-  }
+.CodeMirror {
+  font-size: 20px;
+  line-height: 1.5;
+  padding-top: 10px;
+  min-height: calc(72vh);
+  width: 100%;
 }
 
 .IO-container {
   display: flex;
   justify-content: left;
-  width: calc(50vw);
   min-height: calc(4vh);
+  width: 100%;
+}
+
+.inputArea {
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.401);
+  color: white;
+  font-size: 16px;
+  height: calc(15vh);
+  width: 100%;
 }
 
 .chatArea {
-  min-height: calc(91vh);
-  width: calc(20vw);
   font-size: 16px;
   line-height: 1.6;
-  padding-top: 20px;
+  padding-top: 10px;
   background-color: #1c1e29;
   color: white;
   font-size: 16px;
   border: 1px solid transparent;
+  min-height: calc(85vh);
+  height: calc(92vh);
+}
+
+.sendChatWrap {
+  display: flex;
+  height: calc(5vh);
+}
+
+.sendBtn {
+  width: 20%;
+  margin-right: 5px;
+}
+
+.inputBox {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+  background: #eee;
+  font-size: 16px;
+  font-weight: bold;
+  width: 70%;
 }
 
 .sendBtn,
@@ -221,7 +233,7 @@ footer a:hover {
 }
 
 .clickedLabel {
-  background-color: rgb(99, 92, 232); /* Green */
+  background-color: rgb(99, 92, 232);
   border: 1px solid transparent;
   color: white;
   padding: 10px 10px;
@@ -239,7 +251,7 @@ footer a:hover {
 }
 
 .notClickedLabel {
-  background-color: rgb(189, 187, 225); /* Green */
+  background-color: rgb(189, 187, 225);
   border: 1px solid transparent;
   color: white;
   padding: 10px 10px;
@@ -269,10 +281,6 @@ footer a:hover {
   margin-left: 5px;
   margin-right: 5px;
   width: 70%;
-}
-
-.sendChatWrap {
-  display: flex;
 }
 
 .textarea-style::-webkit-scrollbar {
