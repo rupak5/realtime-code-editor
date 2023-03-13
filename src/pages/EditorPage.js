@@ -171,7 +171,7 @@ const EditorPage = () => {
 
   const sendMessage = () => {
     if (document.getElementById("inputBox").value === "") return;
-    var message = `${location.state.username}: ${
+    var message = `> ${location.state.username}:\n${
       document.getElementById("inputBox").value
     }\n`;
     const chatWindow = document.getElementById("chatWindow");
