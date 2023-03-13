@@ -167,7 +167,7 @@ footer a:hover {
 }
 
 .CodeMirror {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   padding-top: 10px;
   min-height: calc(72vh);
@@ -193,7 +193,7 @@ footer a:hover {
 }
 
 .chatArea {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   padding-top: 10px;
   background-color: #1c1e29;
